@@ -1,0 +1,17 @@
+Anki-card-generator
+
+* What is it?
+  I use Anki to learn new words and usually rely on Oxford dictionary
+  to create flashcards.
+
+  Anki-card-generator is a simple python piece of code aimed at
+  automatically generating vocabulary flashcards from list of words by
+  parsing Oxford dictionary webpages to look for word definition and
+  examples.
+
+  I also owe a SonyReader PRS-T1, which I use to highlight unknown
+  words from text and books I am reading. So there is also a simple
+  python script to extract those words from the PRS-T1 database in
+  order to produce a list of words from which I can generate
+  vocabulary flash-cards.
+  
