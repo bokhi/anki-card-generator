@@ -1,4 +1,4 @@
-Anki-card-generator
+* Anki-card-generator
 
 * What is it?
   I use Anki to learn new words and usually rely on Oxford dictionary
@@ -15,3 +15,8 @@ Anki-card-generator
   order to produce a list of words from which I can generate
   vocabulary flash-cards.
   
+* Usage
+  - run 'python -m prs-t1_annotation filename' to extract your annotations to
+  filename as a list of words
+  - run 'python -m oxford filename' to create 'oxford.txt' which can
+    then be imported with anki from the word list in filename

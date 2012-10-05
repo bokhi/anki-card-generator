@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# Copyright: Martin Boissier
+# License: GNU GPL, version 3 or later; http://www.gnu.org/licenses/gpl-3.0.txt
+
+
 import codecs
 import urllib2 
 from HTMLParser import HTMLParser
@@ -167,14 +172,17 @@ def generate(words):
 
         else:
             print word
+            i = 1
             for senseg in oxford.article.senseGroup:
                 for sense in senseg.sense:
                     if sense.definition != '':
-                        file.write(sense.definition + '<br><br>')
+                        file.write(str(i) + '. ' + sense.definition + '<br><br>')
+                        i += 1
 
             file.write('\t')
             if oxford.article.headpron != []:
-                file.write(oxford.article.pageTitle + ': ' + oxford.article.headpron + ' ' + oxford.article.syllabification + ' ' + oxford.article.variant + '<br>')
+                file.write(oxford.article.pageTitle + ': ' + oxford.article.headpron + ' ' + oxford.article.syllabification + '<br>')
+            i = 1
             for senseg in oxford.article.senseGroup:
                 if senseg.partOfSpeech != '':
                     file.write(senseg.partOfSpeech)
@@ -184,7 +192,8 @@ def generate(words):
                     file.write('<br>')
                 for sense in senseg.sense:
                     if sense.definition != '':
-                        file.write(sense.definition + '<br>')                        
+                        file.write(str(i) + '. ' + sense.definition + '<br>')                        
+                        i += 1
                         for example in sense.example:
                             if example != []:
                                 file.write(example + '<br>')
