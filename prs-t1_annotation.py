@@ -8,7 +8,7 @@ import sqlite3
 database = '/media/READER/Sony_Reader/database/books.db'
 file = 'list.txt'
 
-def get_annotation(database, file)
+def get_annotation(database, file):
     conn = sqlite3.connect(database)
     c = conn.cursor()
 
@@ -19,7 +19,7 @@ def get_annotation(database, file)
 
     c.close()
 
-def delete_annotation(database)
+def delete_annotation(database):
     conn = sqlite3.connect(database)
     c = conn.cursor()
     
@@ -35,4 +35,4 @@ if __name__ == "__main__":
     elif len(sys.argv) == 3:
         get_annotation(str(sys.argv[2]), str(sys.argv[1]))
     else:
-        get_annotation()
+        get_annotation(database, file)
